@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f7ff" />
+  <meta name="description" content="Discover, book and experience live events across Nigeria with Eventra." />
+  <title>Eventra — Discover Live Events Across Nigeria</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="#home" class="brand" aria-label="Eventra home">
+        <img src="assets/eventra_logo_colour.png" alt="Eventra" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" href="#events">Explore Events</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="#organizers">For Organizers</a>
+        <a class="nav-link" href="#how-it-works">How It Works</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+      </nav>
+
+      <form class="nav-search" id="navSearchForm">
+        <img src="assets/Search Icon.png" alt="" />
+        <input id="navSearch" type="search" placeholder="Search events, venues..." aria-label="Search events" />
+        <kbd>⌘ K</kbd>
+      </form>
+
+      <div class="nav-actions">
+        <a href="https://eventra-organizer-desktop.vercel.app" class="sign-in">Sign In</a>
+        <a href="https://eventra-organizer-desktop.vercel.app" class="btn btn-primary btn-small">Get Started</a>
+        <a
+          href="https://eventra-organizer-desktop.vercel.app"
+          class="profile-button"
+          aria-label="Sign in to the Eventra Organizer Dashboard"
+          title="Organizer Dashboard Sign In"
+        >
+          <img src="assets/Profile Icon.png" alt="Profile" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="trust-pill">
+            <span class="status-dot"></span>
+            Nigeria's #1 Live Events Gateway
+            <span class="pill-separator">•</span> 150,000+ Happy Attendees
+            <span class="pill-separator">•</span> 1.2M+ Tickets Sold
+          </div>
+
+          <h1>Discover, Book &amp; Experience <span>Live Events</span> Across Nigeria</h1>
+          <p class="hero-description">
+            From electrifying Afrobeats concerts and premier tech summits to culinary
+            festivals and high-energy comedy spectacles in Lagos, Abuja, and beyond.
+          </p>
+
+          <form class="hero-search" id="heroSearchForm">
+            <label class="search-field">
+              <img src="assets/Search Icon.png" alt="" />
+              <input id="eventSearch" type="search" placeholder="Search events, artists..." aria-label="Search events and artists" />
+            </label>
+            <label class="search-field location-field">
+              <img src="assets/Location Icon.png" alt="" />
+              <select id="locationFilter" aria-label="Select location">
+                <option value="all">All locations</option>
+                <option value="Lagos">Lagos (VI, Lekki)</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Port Harcourt">Port Harcourt</option>
+                <option value="Ibadan">Ibadan</option>
+              </select>
+            </label>
+            <label class="search-field date-field">
+              <img src="assets/Date Icon.png" alt="" />
+              <select id="dateFilter" aria-label="Select date">
+                <option value="any">Anytime</option>
+                <option value="upcoming">Upcoming events</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary search-submit">Find Events <span>→</span></button>
+          </form>
+
+          <div class="trending">
+            <strong>TRENDING:</strong>
+            <button class="trend-tag" data-search="#Afrobeats2026">#Afrobeats2026</button>
+            <button class="trend-tag" data-search="#TechLagos">#TechLagos</button>
+            <button class="trend-tag" data-search="#FoodFest">#FoodFest</button>
+            <button class="trend-tag" data-search="#ComedyNite">#ComedyNite</button>
+            <button class="trend-tag" data-search="#LiveConcerts">#LiveConcerts</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="live-label"><span></span> LIVE THIS WEEKEND</div>
+          <img class="hero-banner" src="assets/Hero Page Banner.png" alt="Live concert with a crowd and colourful stage lights" />
+          <div class="hero-event-card">
+            <div class="event-card-meta">
+              <span class="event-location-label">● LANDMARK CENTRE, LAGOS</span>
+              <span class="sold-out"><span>◉</span> 92% Sold</span>
+            </div>
+            <h3>Tech Conference Lagos 2026</h3>
+            <p>Keynotes • Networking • VIP Afterparty</p>
+            <div class="progress-track"><span></span></div>
+            <div class="event-card-bottom">
+              <strong>From ₦45,000</strong>
+              <a href="#events" data-event-link="tech">Secure Pass ↗</a>
+            </div>
+          </div>
+          <div class="guarantee-float">
+            <img src="assets/Guarantee Icon.png" alt="" />
+            <div><strong>100% Guaranteed</strong><span>Tamper-Proof QR Delivery</span></div>
+          </div>
+        </div>
+
+        <div class="hero-benefits">
+          <div class="benefit"><img src="assets/Wallet Icon.png" alt="" /><div><strong>Instant Passes</strong><span>Apple &amp; Google Wallet</span></div></div>
+          <div class="benefit"><img src="assets/Bank Icon.png" alt="" /><div><strong>Direct Naira Settlement</strong><span>Card, Transfer &amp; USSD</span></div></div>
+          <div class="benefit"><img src="assets/Safety Icon.png" alt="" /><div><strong>Zero Fraud Risk</strong><span>Verified Promoters</span></div></div>
+          <div class="benefit"><img src="assets/Customercare Icon.png" alt="" /><div><strong>24/7 Gate Concierge</strong><span>Real-time Venue Support</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories-section" id="categories">
+      <div class="section-heading">
+        <div><span class="eyebrow">CURATED EXPERIENCES</span><h2>Explore Nigeria by Category</h2></div>
+        <button class="text-link" id="viewAllCategories">View All 18 Categories →</button>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card" data-category="Concerts">
+          <span class="category-icon purple"><img src="assets/Music Icon.png" alt="" /></span>
+          <strong>Concerts</strong><small>142 Events</small>
+        </button>
+        <button class="category-card" data-category="Tech & Web3">
+          <span class="category-icon blue"><img src="assets/Tech Icon.png" alt="" /></span>
+          <strong>Tech &amp; Web3</strong><small>38 Events</small>
+        </button>
+        <button class="category-card" data-category="Food & Drink">
+          <span class="category-icon orange"><img src="assets/Food and Drink Icon.png" alt="" /></span>
+          <strong>Food &amp; Drink</strong><small>29 Events</small>
+        </button>
+        <button class="category-card" data-category="Comedy Shows">
+          <span class="category-icon purple"><img src="assets/Comedy Icon.png" alt="" /></span>
+          <strong>Comedy Shows</strong><small>45 Events</small>
+        </button>
+        <button class="category-card" data-category="Arts & Culture">
+          <span class="category-icon blue"><img src="assets/Art and Culture.png" alt="" /></span>
+          <strong>Arts &amp; Culture</strong><small>22 Events</small>
+        </button>
+        <button class="category-card" data-category="Sports & Fitness">
+          <span class="category-icon orange"><img src="assets/Sport.png" alt="" /></span>
+          <strong>Sports &amp; Fitness</strong><small>18 Events</small>
+        </button>
+      </div>
+      <p class="filter-status" id="filterStatus" aria-live="polite"></p>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="section events-section" id="events">
+      <div class="section-heading event-heading">
+        <div><span class="eyebrow"><span class="tiny-flame">♨</span> SELLING FAST</span><h2>Featured Live Events in Nigeria</h2></div>
+        <div class="city-filter" id="cityFilter">
+          <button class="city-chip selected" data-city="All Cities">All Cities</button>
+          <button class="city-chip" data-city="Lagos">Lagos</button>
+          <button class="city-chip" data-city="Abuja">Abuja</button>
+          <button class="city-chip" data-city="Port Harcourt">Port Harcourt</button>
+        </div>
+      </div>
+
+      <div class="events-grid" id="eventsGrid">
+        <article class="event-card" data-category="Concerts" data-city="Lagos" data-search="afrobeats live showcase concert music #Afrobeats2026 #LiveConcerts">
+          <div class="event-image-wrap">
+            <img src="assets/Trending.png" alt="Crowd enjoying a live music concert" class="event-image" />
+            <span class="image-tag">● TRENDING</span>
+            <button class="favorite-btn" aria-label="Save Afrobeats Live Showcase" aria-pressed="false">♡</button>
+            <span class="date-badge"><small>DEC</small><strong>18</strong></span>
+          </div>
+          <div class="event-details">
+            <span class="event-location">⌖ Landmark Beach, VI, Lagos</span>
+            <h3>Afrobeats Live Showcase...</h3>
+            <p>Top headliners, cultural dances, and curated VIP experiences in the city.</p>
+            <div class="event-price"><div><small>From</small><strong>₦15,000</strong></div><button class="btn btn-primary btn-ticket" data-event="Afrobeats Live Showcase">Get Tickets</button></div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Tech & Web3" data-city="Lagos" data-search="tech conference lagos networking #TechLagos">
+          <div class="event-image-wrap">
+            <img src="assets/Conference.png" alt="Technology conference with a large stage" class="event-image" />
+            <span class="image-tag">● CONFERENCE</span>
+            <button class="favorite-btn" aria-label="Save Tech Conference Lagos" aria-pressed="false">♡</button>
+            <span class="date-badge"><small>OCT</small><strong>12</strong></span>
+          </div>
+          <div class="event-details">
+            <span class="event-location">⌖ Landmark Centre, Oniru, Lagos</span>
+            <h3>Tech Conference Lagos...</h3>
+            <p>West Africa's biggest gathering of innovators, entrepreneurs and tech leaders.</p>
+            <div class="event-price"><div><small>From</small><strong>₦15,000</strong></div><button class="btn btn-primary btn-ticket" data-event="Tech Conference Lagos">Get Tickets</button></div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Food & Drink" data-city="Lagos" data-search="lagos street food carnival food festival #FoodFest">
+          <div class="event-image-wrap">
+            <img src="assets/Festival.png" alt="Outdoor food festival with visitors" class="event-image" />
+            <span class="image-tag">● FESTIVAL</span>
+            <button class="favorite-btn" aria-label="Save Lagos Street Food Carnival" aria-pressed="false">♡</button>
+            <span class="date-badge"><small>NOV</small><strong>05</strong></span>
+          </div>
+          <div class="event-details">
+            <span class="event-location">⌖ Muri Okunola Park, VI</span>
+            <h3>Lagos Street Food Carnival</h3>
+            <p>Over 70 food vendors, smoky Asun delicacies, music and festive experiences.</p>
+            <div class="event-price"><div><small>From</small><strong>₦5,000</strong></div><button class="btn btn-primary btn-ticket" data-event="Lagos Street Food Carnival">Get Tickets</button></div>
+          </div>
+        </article>
+
+        <article class="event-card" data-category="Comedy Shows" data-city="Abuja" data-search="night of a thousand laughs comedy show #ComedyNite">
+          <div class="event-image-wrap">
+            <img src="assets/Comedy.png" alt="Comedian performing on a stage" class="event-image" />
+            <span class="image-tag">● COMEDY</span>
+            <button class="favorite-btn" aria-label="Save Night of a Thousand Laughs" aria-pressed="false">♡</button>
+            <span class="date-badge"><small>NOV</small><strong>20</strong></span>
+          </div>
+          <div class="event-details">
+            <span class="event-location">⌖ Eko Hotels Convention Centre, VI</span>
+            <h3>Night of a Thousand Laughs</h3>
+            <p>Nigeria's funniest veterans and emerging comedy stars in one unforgettable night.</p>
+            <div class="event-price"><div><small>From</small><strong>₦10,000</strong></div><button class="btn btn-primary btn-ticket" data-event="Night of a Thousand Laughs">Get Tickets</button></div>
+          </div>
+        </article>
+      </div>
+      <div class="empty-state hidden" id="emptyState">
+        <span>⌕</span><h3>No matching events found</h3>
+        <p>Try a different search term, category or city.</p>
+        <button class="btn btn-primary" id="resetFilters">Show all events</button>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section why-section" id="how-it-works">
+      <div class="center-heading">
+        <span class="eyebrow">ENGINEERED FOR NIGERIA</span>
+        <h2>Why Event Goers Organizers Rely on Eventra</h2>
+        <p>We eliminated ticketing scams, gate bottlenecks, and payment failures with an infrastructure tailored for Nigerian live entertainment.</p>
+      </div>
+      <div class="why-grid">
+        <article class="why-card">
+          <span class="why-icon purple"><img src="assets/Scan Icon.png" alt="" /></span>
+          <h3>Instant Digital QR Passes</h3>
+          <p>Delivered instantly to your email, WhatsApp, and Apple/Google Wallet. Check in at the gate in under 1.2 seconds even with spotty connectivity.</p>
+          <span class="why-foot purple-text">◉ Works 100% Offline</span>
+        </article>
+        <article class="why-card">
+          <span class="why-icon blue"><img src="assets/Bank Icon.png" alt="" /></span>
+          <h3>Bank-Grade Payments</h3>
+          <p>Seamless checkout through Paystack integration supporting Nigerian debit cards, direct bank transfer, Apple Pay, and instant USSD codes.</p>
+          <span class="why-foot purple-text">♙ 256-Bit SSL Encrypted</span>
+        </article>
+        <article class="why-card">
+          <span class="why-icon gold"><img src="assets/Verified.png" alt="" /></span>
+          <h3>Verified Organizers Only</h3>
+          <p>Strict CAC and promoter identity verification ensures counterfeit passes are impossible. Full refund protection in case of promoter cancellation.</p>
+          <span class="why-foot gold-text">⊙ Zero Counterfeits</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Organizer CTA -->
+    <section class="organizer-section" id="organizers">
+      <div class="organizer-copy">
+        <span class="organizer-label">EVENTRA ORGANIZER PORTAL</span>
+        <h2>Selling tickets for your next concert,<br class="desktop-break" /> conference, or festival?</h2>
+        <p>Join 2,400+ leading Nigerian promoters and creative directors. Enjoy direct automated payouts, real-time ticket analytics, gate scanner mobile apps, and ticket sales.</p>
+        <div class="organizer-actions">
+          <a href="#create-event" class="btn btn-primary" data-action="create-event">Create an Event Now →</a>
+          <a href="#organizer-portal" class="btn btn-dark" data-action="organizer-portal">Explore Organizer Portal</a>
+        </div>
+        <div class="organizer-stats">
+          <div><strong>0%</strong><span>Hidden Fees</span></div>
+          <div><strong>Next-Day</strong><span>Bank Payouts</span></div>
+          <div><strong>99.9%</strong><span>Gate Scanner Uptime</span></div>
+        </div>
+      </div>
+      <div class="metrics-panel">
+        <div class="metrics-title">Live Gate Metrics <span></span></div>
+        <div class="metric-box"><small>Scanned Admissions</small><strong>3,842 / 4,000</strong><div class="metric-track"><span></span></div></div>
+        <div class="metric-box"><small>Gross Revenue Settled</small><strong class="revenue">₦57,630,000</strong></div>
+        <small class="payout-note">⚡ Payout scheduled for 09:00 AM WAT</small>
+      </div>
+    </section>
+
+
+    <!-- Pricing -->
+    <section class="section pricing-section" id="pricing">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CLEAR BEFORE YOU BOOK</span>
+          <h2>Simple, transparent pricing</h2>
+          <p class="section-intro">Review the ticket price and any applicable charges before completing your booking.</p>
+        </div>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <span class="pricing-icon"><img src="assets/Wallet Icon.png" alt="" /></span>
+          <h3>For Event Goers</h3>
+          <p>Browse events and see the ticket price before you book.</p>
+          <ul>
+            <li>Clear ticket pricing</li>
+            <li>Secure checkout experience</li>
+            <li>Digital ticket access</li>
+          </ul>
+          <a href="#events" class="btn btn-primary">Explore Events →</a>
+        </article>
+        <article class="pricing-card pricing-card-featured">
+          <span class="pricing-icon"><img src="assets/Bank Icon.png" alt="" /></span>
+          <h3>For Organizers</h3>
+          <p>Manage event sales, attendees, check-ins and payouts from the organizer portal.</p>
+          <ul>
+            <li>Event and ticket management</li>
+            <li>Attendee and check-in tools</li>
+            <li>Sales and payout information</li>
+          </ul>
+          <a href="https://eventra-organizer-desktop.vercel.app" class="btn btn-primary">Organizer Sign In →</a>
+        </article>
+      </div>
+      <p class="pricing-note">Any applicable booking charges and organizer terms should be reviewed before payment or onboarding.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+      <div class="center-heading">
+        <span class="eyebrow">TESTIMONIALS</span>
+        <h2>Loved by Nigerians Everywhere</h2>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“Buying tickets on Eventra was unbelievably smooth. No failed debit card charges, and getting into the concert at Landmark Beach was literally a 3-second barcode scan.”</p>
+          <div class="reviewer"><span class="avatar lilac">TA</span><div><strong>Tunde Adebayo</strong><small>Lekki Phase 1, Lagos</small></div></div>
+        </article>
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“As a conference organizer hosting 3,500 attendees, Eventra's real-time dashboard and offline scanner app eliminated long entry lines completely. Payout arrived the next morning.”</p>
+          <div class="reviewer"><span class="avatar blue">CE</span><div><strong>Chinedu Eze</strong><small>Tech Summit Director</small></div></div>
+        </article>
+        <article class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>“I love getting alerts whenever my favorite Afrobeats artists drop tickets. Having my passes directly inside Apple Wallet makes nightlife events totally stress-free.”</p>
+          <div class="reviewer"><span class="avatar peach">AB</span><div><strong>Amina Bello</strong><small>Maitama, Abuja</small></div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- App CTA -->
+    <section class="section app-section">
+      <div class="app-copy">
+        <span class="eyebrow">NEVER MISS A DROP</span>
+        <h2>Get the Eventra App</h2>
+        <p>Unlock exclusive early bird presales, offline gate QR passes, and instant VIP guestlist drops across Nigeria on iOS &amp; Android.</p>
+        <div class="store-buttons">
+          <a href="#app-store" class="store-button" data-action="app-store"><img src="assets/Apple Store.png" alt="" /><span><small>DOWNLOAD ON</small><strong>App Store</strong></span></a>
+          <a href="#google-play" class="store-button" data-action="google-play"><img src="assets/Google Store.png" alt="" /><span><small>GET IT ON</small><strong>Google Play</strong></span></a>
+        </div>
+      </div>
+      <div class="app-features">
+        <span>♧ &nbsp; Presale Alerts for Verified Fans</span>
+        <span>⌁ &nbsp; Offline Ticket QR Barcode Storage</span>
+        <span>◉ &nbsp; VIP Concierge &amp; Lounge Access</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="brand footer-brand" aria-label="Eventra home"><img src="assets/eventra_logo_colour.png" alt="Eventra" /></a>
+        <p>Nigeria's leading ticketing &amp; live event discovery platform. Seamlessly connect with thrilling concerts, conferences, cultural festivals, and exclusive nightlife.</p>
+        <span class="location-pill">⌖ &nbsp; Lagos, Nigeria &nbsp; • &nbsp; Active Region</span>
+      </div>
+      <div class="footer-column"><h3>CITIES</h3><a href="#events" data-footer-city="Lagos">⌖ Lagos</a><a href="#events" data-footer-city="Abuja">⌖ Abuja</a><a href="#events" data-footer-city="Port Harcourt">⌖ Port Harcourt</a><a href="#events" data-footer-city="Ibadan">⌖ Ibadan</a></div>
+      <div class="footer-column"><h3>FOR ORGANIZERS</h3><a href="#create-event" data-action="create-event">Create Event</a><a href="#organizer-portal" data-action="organizer-portal">Organizer Dashboard</a><a href="#ticket-scanner" data-action="ticket-scanner">Ticket Scanner App</a><a href="#payouts" data-action="payouts">Payouts &amp; Analytics</a><a href="#partner" data-action="partner">Partner Program</a></div>
+      <div class="footer-column footer-newsletter">
+        <h3>STAY IN THE LOOP</h3>
+        <p>Get curated weekly drops and early-bird presale alerts straight to your inbox.</p>
+        <form id="newsletterForm">
+          <label class="sr-only" for="newsletterEmail">Email address</label>
+          <input id="newsletterEmail" type="email" placeholder="✉ Enter email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p id="newsletterMessage" class="form-message" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Eventra Technologies Ltd. All rights reserved.</span>
+      <div><a href="#privacy" data-action="privacy">Privacy Policy</a><a href="#terms" data-action="terms">Terms of Service</a><a href="#cookies" data-action="cookies">Cookie Settings</a><a href="#security" data-action="security">Security</a></div>
+    </div>
+  </footer>
+
+  <!-- Reusable notice dialog for destinations not yet connected -->
+  <dialog id="noticeDialog" class="notice-dialog">
+    <button class="dialog-close" id="closeDialog" aria-label="Close dialog">×</button>
+    <div class="dialog-mark">E</div>
+    <h2 id="dialogTitle">Coming soon</h2>
+    <p id="dialogMessage">This feature will be available when the relevant service is connected.</p>
+    <button class="btn btn-primary dialog-ok" id="dialogOk">Got it</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
